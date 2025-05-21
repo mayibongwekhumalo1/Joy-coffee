@@ -1,0 +1,721 @@
+// varriables , reset and mixins
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// varriables
+
+$body-color: #ffffff;
+$primary-color: #362012;
+$body-text-color: #000000;
+$heading-color: #3e2012;
+
+// fonts
+$font-family: "Montserrat", sans-serif;
+
+// font-size
+
+$body-fs: 18px;
+$heading-fs: 41px;
+$heading-fs-sm: 30px;
+$heading-fs-md: 35px;
+$button-fs: 20px;
+$button-fs-sm: 16px;
+$button-fs-md: 18px;
+
+// font-weight
+$font-weight: 400;
+$font-weight-bold: 700;
+
+body {
+  font-family: $font-family;
+  font-size: $body-fs;
+  color: $body-text-color;
+  background-color: $body-color;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: transparent;
+  color: black;
+  padding: 20px 0;
+  z-index: 10;
+  height: 12vh;
+  width: 100%;
+  margin-bottom: 2em;
+
+  nav{
+    .navbar-brand{
+      width: 190px;
+      height: 10vh;
+      align-content: center;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .menu{
+      .bar{
+        width: 30px;
+        height: 5px;
+        margin: 5px auto;
+        background-color: $primary-color;
+      }
+    }
+
+   
+    li{
+      a{
+        color: $heading-color;
+        text-decoration: none;
+        font-size: $button-fs;
+        font-weight: $font-weight-bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        &:hover{
+          background-color: $primary-color;
+          color: white;
+          transform: scale(1.05);
+
+        }
+      }
+    }
+
+  }
+}
+
+
+.banner{
+position: relative;
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100vh;
+ 
+  text-align: center;
+
+  .bannerh1{
+
+    margin-top: 2.5em;
+    h1{
+      font-size: 10em;
+      font-weight: $font-weight-bold;
+      color: #EDC588;
+      z-index: -1;
+    }
+  }
+
+  .decoration{
+    margin-top: 2em;
+    position: relative;
+    .coffee-seed, .coffee-cup{
+      max-width: 400px;
+      height: 250px;
+      position: absolute;
+    bottom: 5%;
+      left: 30%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      
+    }
+
+    .coffee-cup{
+      height: 400px;
+      left: 43%;
+      bottom: 20;
+      rotate: 22deg;
+      z-index: 1;
+     
+    }
+  }
+}
+
+.container{
+  .row{
+    .col-md-6{
+      .content{
+         h3{
+          font-size: $body-fs;
+          font-weight: $font-weight-bold;
+          color: $heading-color;
+          margin-bottom: 1em;
+          
+          width: 50%;
+          z-index: 2;
+         }
+
+         button{
+          background-color: $primary-color;
+          color: white;
+          font-size: $button-fs;
+          font-weight: 400;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          width: 200px;
+          height: 50px;
+
+          &:hover{
+            background-color: white;
+            color: $primary-color;
+            transform: scale(1.05);
+          }
+         }
+      }
+
+
+    }
+  }
+}
+
+.form-container {
+            background-color: rgba(62, 39, 35, 0.9); 
+            padding: 2rem; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            margin: 2rem auto; 
+
+            .sin-up{
+              background-color: #EDC588;
+              color: white;
+            }
+
+
+            .log-in{
+              background-color: transparent;
+              color: #ffffff;
+              border: 2px solid #EDC588;
+            }
+        }
+
+
+
+
+        .about{
+          
+           display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: end;
+                  padding-top: 2rem;
+         
+          top: 20px;
+          width: 100%;
+          min-height: 1000px;
+          margin-top: 2em;
+          .container{
+            .row{
+              .col-md-6{
+                .img-wrapper{
+                 
+                 
+                  height: 600px;
+                  width: 100%;
+                  
+                  
+                  img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                .text-wrapper{
+                 
+                  padding: 2rem;
+                  width: 100%;
+                  margin-top: 2rem;
+
+                  h3{
+                    font-size: $heading-fs-sm;
+                    font-weight: $font-weight-bold;
+                    color: $heading-color;
+                    margin-top: 1em;
+                    text-align: start;
+                    width: 50%;
+                    z-index: 2;
+
+                    
+                   }
+
+
+                    p{
+                      font-size: $body-fs;
+                      font-weight: $font-weight;
+                      color: $body-text-color;
+                      margin-top: 1em;
+                      text-align: start;
+                      width: 100%;
+                      z-index: 2;
+                    }
+
+                    button{
+                      background-color: $primary-color;
+                      color: white;
+                      font-size: $button-fs;
+                      font-weight: 400;
+                      padding: 10px 20px;
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                      width: 200px;
+                      height: 50px;
+
+                      &:hover{
+                        background-color: white;
+                        color: $primary-color;
+                        transform: scale(1.05);
+                      }
+                    }
+
+
+                    .serve{
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: center;
+                      align-items: center;
+                      margin-top: 2em;
+
+                      .serve-item{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 1rem;
+                       
+                        width: 40%;
+
+                        img{
+                          width: 100px;
+                          height: 100px;
+                          object-fit: contain;
+                        }
+
+                        h4{
+                          font-size: $heading-fs-sm;
+                          font-weight: $font-weight-bold;
+                          color: $heading-color;
+                          margin-top: 1em;
+                        }
+                      }
+                    }
+                }
+
+              }
+            }
+          }
+        }
+
+
+
+        .recipes{
+          width: 100%;
+          min-height: 600px;
+          margin-top: 2em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+         
+          .container{
+            .col-md-12{
+              .wrapper{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+               
+                width: 100%;
+              
+
+                h3{
+                  font-size: $heading-fs-sm;
+                  font-weight: $font-weight-bold;
+                  color: $heading-color;
+                  margin-top: 1em;
+                  text-align: center;
+                  width: 100%;
+                  z-index: 2;
+
+                  
+                 }
+
+                 .service-item{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 1rem;
+                 
+                  width: 300px;
+                  height: 350px;
+                  align-items: center;
+                  text-align: center;
+                  .img-wrapper{
+                    width: 100%;  
+                    height: 40%;
+                }
+
+                button{
+                  background-color: $primary-color;
+                  color: white;
+                  font-size: $button-fs;
+                  font-weight: 400;
+                  padding: 10px 20px;
+                  transition: all 0.3s ease;
+                  width: 150px;
+                  height: 50px;
+                  border: none;
+
+                  &:hover{
+                    background-color: white;
+                    color: $primary-color;
+                    transform: scale(1.05);
+                  }
+                }
+
+                  img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+
+                 }
+              }
+            }
+          }
+        }
+
+
+
+
+.our-services{
+  width: 100%;
+  min-height: 600px;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+
+  h2{
+    font-size: $heading-fs-sm;
+    font-weight: $font-weight-bold;
+    color: $heading-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    
+   }
+
+
+   p{
+    font-size: $body-fs;
+    font-weight: $font-weight;
+    color: $body-text-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 40%;
+   }
+
+   .services-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+
+
+
+
+    .services-item{
+      width: 300px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+       display: flex;
+       flex-direction: column;
+       justify-content: end;
+       align-items: center;
+
+
+       span{
+        
+        background-color: rgba(244, 244, 244, 0.734);
+        width: 80%x;
+        margin-bottom: 20px;
+        padding: 0.3em;
+       }
+    
+   }
+  }
+
+}
+
+
+
+// team seaction
+
+
+.team{
+  width: 100%;
+  min-height: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+   h2{
+       font-size: $heading-fs-sm;
+    font-weight: $font-weight-bold;
+    color: $heading-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+   }
+
+   p{
+    font-size: $body-fs;
+    font-weight: $font-weight;
+    color: $body-text-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 50%;
+    border: solid red;
+   }
+
+
+   
+
+
+  }
+
+
+.team-wrapper{
+ 
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5em;
+    padding: auto 10px;
+
+    .team-item{
+      width: 50%;
+      height: 550px;
+      background-position: center left;
+      background-size: cover;
+      background-repeat: no-repeat;
+       display: flex;
+       flex-direction: column;
+       justify-content: end;
+       align-items: center;
+
+       .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(62, 32, 18, 0.311);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+          background-color: rgba(255, 255, 255, 0.515);
+          padding: 0.8em;
+          color: $heading-color;
+        }
+       }
+    
+}
+
+
+#teams{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .teams-item{
+    width: 100%;
+    height: 183.33px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+
+
+   }
+
+
+   .partners{
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    h2{
+      font-size: $heading-fs-sm;
+    font-weight: $font-weight-bold;
+    color: $heading-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+
+
+    }
+
+
+    p{
+       font-size: $body-fs;
+    font-weight: $font-weight;
+    color: $body-text-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 40%;
+    }
+
+
+    .partners-wrapper{
+      width: 95%;
+      min-height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f4f4f4;
+      margin-top: 1.5em;
+
+      .partners-item{
+        background-color: white;
+        width: 300px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+
+        .p-img{
+            width: 100%;
+            height: 50%;
+            margin-bottom: 20px;
+
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+        }
+
+        p,h3,span{
+        text-align: start;
+          margin-left: 10px;
+          color: $heading-color;
+          width: 100%;
+        }
+      }
+    }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+// media queries
+
+
+@media (max-width: 768px) {
+  header{
+    height: 10vh;
+    padding: 10px 0;
+
+    nav{
+      .navbar-brand{
+        width: 150px;
+        height: 8vh;
+      }
+    }
+  }
+
+  .banner{
+    height: 80vh;
+
+    .bannerh1{
+      h1{
+        font-size: 5em;
+      }
+    }
+
+    .decoration{
+      .coffee-seed, .coffee-cup{
+        max-width: 200px;
+        height: 150px;
+      }
+    }
+  }
+
+
+
+
+}
+
+
+@media (max-width: 480px) {
+  header{
+    height: 8vh;
+    padding: 5px 0;
+
+    nav{
+      .navbar-brand{
+        width: 120px;
+        height: 6vh;
+      }
+    }
+  }
+
+  .banner{
+    height: 70vh;
+
+    .bannerh1{
+      h1{
+        font-size: 4em;
+      }
+    }
+
+    .decoration{
+      .coffee-seed, .coffee-cup{
+        max-width: 150px;
+        height: 100px;
+      }
+    }
+  }
+}
