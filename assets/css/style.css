@@ -94,7 +94,7 @@ header nav li a:hover {
   z-index: 1;
 }
 
-.container .row .col-md-6 .content h3 {
+.container .row .col-lg-6 .content h3 {
   font-size: 18px;
   font-weight: 700;
   color: #3e2012;
@@ -102,7 +102,7 @@ header nav li a:hover {
   width: 50%;
   z-index: 2;
 }
-.container .row .col-md-6 .content button {
+.container .row .col-lg-6 .content .banner-btn {
   background-color: #362012;
   color: white;
   font-size: 20px;
@@ -113,7 +113,7 @@ header nav li a:hover {
   width: 200px;
   height: 50px;
 }
-.container .row .col-md-6 .content button:hover {
+.container .row .col-lg-6 .content .banner-btn:hover {
   background-color: white;
   color: #362012;
   transform: scale(1.05);
@@ -147,22 +147,22 @@ header nav li a:hover {
   min-height: 1000px;
   margin-top: 2em;
 }
-.about .container .row .col-md-6 .img-wrapper {
+.about .container .row .col-lg-6 .img-wrapper {
   height: 600px;
   width: 100%;
 }
-.about .container .row .col-md-6 .img-wrapper img {
+.about .container .row .col-lg-6 .img-wrapper img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about .container .row .col-md-6 .text-wrapper {
+.about .container .row .col-lg-6 .text-wrapper {
   padding: 2rem;
   width: 100%;
   margin-top: 2rem;
 }
-.about .container .row .col-md-6 .text-wrapper h3 {
+.about .container .row .col-lg-6 .text-wrapper h3 {
   font-size: 30px;
   font-weight: 700;
   color: #3e2012;
@@ -171,7 +171,7 @@ header nav li a:hover {
   width: 50%;
   z-index: 2;
 }
-.about .container .row .col-md-6 .text-wrapper p {
+.about .container .row .col-lg-6 .text-wrapper p {
   font-size: 18px;
   font-weight: 400;
   color: #000000;
@@ -180,7 +180,7 @@ header nav li a:hover {
   width: 100%;
   z-index: 2;
 }
-.about .container .row .col-md-6 .text-wrapper button {
+.about .container .row .col-lg-6 .text-wrapper button {
   background-color: #362012;
   color: white;
   font-size: 20px;
@@ -191,37 +191,41 @@ header nav li a:hover {
   width: 200px;
   height: 50px;
 }
-.about .container .row .col-md-6 .text-wrapper button:hover {
+.about .container .row .col-lg-6 .text-wrapper button:hover {
   background-color: white;
   color: #362012;
   transform: scale(1.05);
 }
-.about .container .row .col-md-6 .text-wrapper .serve {
+.about .container .row .col-lg-6 .text-wrapper .serve {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 2em;
 }
-.about .container .row .col-md-6 .text-wrapper .serve .serve-item {
+.about .container .row .col-lg-6 .text-wrapper .serve .serve-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
-  width: 40%;
+  border: 2px solid red;
+  width: 150px;
 }
-.about .container .row .col-md-6 .text-wrapper .serve .serve-item img {
+.about .container .row .col-lg-6 .text-wrapper .serve .serve-item img {
   width: 100px;
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.about .container .row .col-md-6 .text-wrapper .serve .serve-item h4 {
+.about .container .row .col-lg-6 .text-wrapper .serve .serve-item h4 {
   font-size: 30px;
   font-weight: 700;
   color: #3e2012;
   margin-top: 1em;
+}
+.about .container .row .col-lg-6 .text-wrapper .serve .serve-item p {
+  text-align: center;
 }
 
 .recipes {
@@ -254,15 +258,22 @@ header nav li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
+  border: 2px solid red;
   width: 300px;
-  height: 350px;
+  height: 400px;
   align-items: center;
   text-align: center;
 }
 .recipes .container .col-md-12 .wrapper .service-item .img-wrapper {
   width: 100%;
-  height: 40%;
+  height: 175px;
+}
+.recipes .container .col-md-12 .wrapper .service-item .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .recipes .container .col-md-12 .wrapper .service-item button {
   background-color: #362012;
@@ -362,7 +373,6 @@ header nav li a:hover {
   margin-top: 1em;
   text-align: center;
   width: 50%;
-  border: solid red;
 }
 
 .team-wrapper {
@@ -472,43 +482,113 @@ header nav li a:hover {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  header {
+.testmonial {
+  width: 100%;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+.testmonial h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #3e2012;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+.testmonial p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 1em;
+  text-align: center;
+  width: 40%;
+}
+.testmonial .testimonial-wrapper {
+  min-height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.376);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testmonial .flex-cotainer {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  border: 2px solid red;
+}
+.testmonial .flex-cotainer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(62, 32, 18, 0.311);
+}
+@media (max-width: 992px) {
+  .testmonial header {
     height: 10vh;
     padding: 10px 0;
   }
-  header nav .navbar-brand {
+  .testmonial header nav .navbar-brand {
     width: 150px;
     height: 8vh;
   }
-  .banner {
+  .testmonial .banner {
     height: 80vh;
   }
-  .banner .bannerh1 h1 {
+  .testmonial .banner .bannerh1 h1 {
     font-size: 5em;
   }
-  .banner .decoration .coffee-seed, .banner .decoration .coffee-cup {
-    max-width: 200px;
-    height: 150px;
+  .testmonial .banner .decoration .coffee-seed, .testmonial .banner .decoration .coffee-cup {
+    max-width: 300px;
+    height: 200px;
+  }
+  .testmonial .about {
+    margin-top: 45rem;
+  }
+  .testmonial .about .container .row .col-lg-6 .text-wrapper h3 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .testmonial .container .row .col-lg-6 .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testmonial .partners-wrapper {
+    flex-wrap: wrap;
   }
 }
-@media (max-width: 480px) {
-  header {
+@media (max-width: 576px) {
+  .testmonial header {
     height: 8vh;
     padding: 5px 0;
   }
-  header nav .navbar-brand {
+  .testmonial header nav .navbar-brand {
     width: 120px;
     height: 6vh;
   }
-  .banner {
+  .testmonial .banner {
     height: 70vh;
   }
-  .banner .bannerh1 h1 {
+  .testmonial .banner .bannerh1 h1 {
     font-size: 4em;
   }
-  .banner .decoration .coffee-seed, .banner .decoration .coffee-cup {
-    max-width: 150px;
-    height: 100px;
+  .testmonial .banner .decoration .coffee-seed, .testmonial .banner .decoration .coffee-cup {
+    max-width: 250px;
+    height: 200px;
+  }
+  .testmonial .about {
+    margin-top: 58rem;
+  }
+  .testmonial .team h2, .testmonial .partners h2 {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

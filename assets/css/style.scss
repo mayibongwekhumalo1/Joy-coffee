@@ -145,7 +145,7 @@ position: relative;
 
 .container{
   .row{
-    .col-md-6{
+    .col-lg-6{
       .content{
          h3{
           font-size: $body-fs;
@@ -157,7 +157,7 @@ position: relative;
           z-index: 2;
          }
 
-         button{
+         .banner-btn{
           background-color: $primary-color;
           color: white;
           font-size: $button-fs;
@@ -218,7 +218,7 @@ position: relative;
           margin-top: 2em;
           .container{
             .row{
-              .col-md-6{
+              .col-lg-6{
                 .img-wrapper{
                  
                  
@@ -294,8 +294,9 @@ position: relative;
                         align-items: center;
                         justify-content: center;
                         margin: 0 1rem;
-                       
-                        width: 40%;
+                       border: 2px solid red;
+                        width: 150px;
+
 
                         img{
                           width: 100px;
@@ -308,6 +309,10 @@ position: relative;
                           font-weight: $font-weight-bold;
                           color: $heading-color;
                           margin-top: 1em;
+                        }
+
+                        p{
+                          text-align: center;
                         }
                       }
                     }
@@ -357,15 +362,22 @@ position: relative;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  margin: 0 1rem;
-                 
+                  margin: 0.5rem 1rem;
+                 border: 2px solid red;
                   width: 300px;
-                  height: 350px;
+                  height: 400px;
                   align-items: center;
                   text-align: center;
                   .img-wrapper{
                     width: 100%;  
-                    height: 40%;
+                    height: 175px;
+
+
+                    img{
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    }
                 }
 
                 button{
@@ -498,7 +510,7 @@ position: relative;
     margin-top: 1em;
     text-align: center;
     width: 50%;
-    border: solid red;
+   
    }
 
 
@@ -644,6 +656,70 @@ position: relative;
 
 
 
+// testimonial section
+
+.testmonial{
+  width: 100%;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  
+  h2{
+        font-size: $heading-fs-sm;
+    font-weight: $font-weight-bold;
+    color: $heading-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+
+  p{
+    font-size: $body-fs;
+    font-weight: $font-weight;
+    color: $body-text-color;
+    margin-top: 1em;
+    text-align: center;
+    width: 40%;
+  }
+
+
+  .testimonial-wrapper{
+    min-height: 800px;
+    background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.376);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .flex-cotainer{
+      width: 100%;
+      height: 400px;
+       display: flex;
+       border: 2px solid red;
+
+       .test-text{
+        width: 50%;
+
+       }
+
+       .test{
+        border: 2px;
+       }
+   
+  }
+
+
+
+}
+
 
 
 
@@ -653,7 +729,7 @@ position: relative;
 // media queries
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header{
     height: 10vh;
     padding: 10px 0;
@@ -677,19 +753,41 @@ position: relative;
 
     .decoration{
       .coffee-seed, .coffee-cup{
-        max-width: 200px;
-        height: 150px;
+        max-width: 300px;
+        height: 200px;
       }
     }
   }
 
 
+  .about{
+    margin-top: 45rem;
+.container .row .col-lg-6 .text-wrapper h3{
+      font-size: $heading-fs-sm;
+      width: 100%;
 
+  }
+
+
+     
+    }
+  
+
+   .container .row .col-lg-6 .text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .partners-wrapper{
+    flex-wrap: wrap;
+   }
 
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  
   header{
     height: 8vh;
     padding: 5px 0;
@@ -713,9 +811,20 @@ position: relative;
 
     .decoration{
       .coffee-seed, .coffee-cup{
-        max-width: 150px;
-        height: 100px;
+        max-width: 250px;
+        height: 200px;
       }
     }
   }
+
+  .about{
+    margin-top: 58rem;
+
+  }
+
+ 
+
+}
+
+
 }
