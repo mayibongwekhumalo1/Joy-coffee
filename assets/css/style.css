@@ -62,7 +62,7 @@ header {
   background-color: #f4f4f4;
   width: 100%;
   height: 100vh;
-  padding: 3.5em 1em;
+  padding: 3.5em 0;
   text-align: center;
 }
 .banner .bannerh1 {
@@ -718,7 +718,7 @@ footer .footer-content .foot-links::after {
     height: 200px;
   }
   .about {
-    margin-top: 45rem;
+    margin-top: 20rem;
   }
   .about .container .row .col-lg-6 .text-wrapper h3 {
     font-size: 30px;
@@ -828,7 +828,7 @@ footer .footer-content .foot-links::after {
     height: 200px;
   }
   .about {
-    margin-top: 58rem;
+    margin-top: 60rem;
   }
   #teams {
     display: none;
