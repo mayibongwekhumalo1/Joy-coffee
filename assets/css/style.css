@@ -13,11 +13,8 @@ body {
 }
 
 header {
-  background-color: transparent;
-  color: black;
-  padding: 20px 0;
-  z-index: 10;
-  height: 12vh;
+  color: #3e2012;
+  height: 15vh;
   width: 100%;
   margin-bottom: 2em;
 }
@@ -53,11 +50,19 @@ header nav li a:hover {
   transform: scale(1.05);
 }
 
+header {
+  z-index: 50;
+  position: fixed;
+  background-color: #f4f4f4;
+  top: 0;
+}
+
 .banner {
   position: relative;
   background-color: #f4f4f4;
   width: 100%;
   height: 100vh;
+  padding: 3.5em 1em;
   text-align: center;
 }
 .banner .bannerh1 {
@@ -94,7 +99,7 @@ header nav li a:hover {
   z-index: 1;
 }
 
-.container .row .col-lg-6 .content h3 {
+.container-fluid .row .col-lg-6 .content h3 {
   font-size: 18px;
   font-weight: 700;
   color: #3e2012;
@@ -102,7 +107,7 @@ header nav li a:hover {
   width: 50%;
   z-index: 2;
 }
-.container .row .col-lg-6 .content .banner-btn {
+.container-fluid .row .col-lg-6 .content .banner-btn {
   background-color: #362012;
   color: white;
   font-size: 20px;
@@ -112,15 +117,16 @@ header nav li a:hover {
   transition: all 0.3s ease;
   width: 200px;
   height: 50px;
+  border: none;
 }
-.container .row .col-lg-6 .content .banner-btn:hover {
+.container-fluid .row .col-lg-6 .content .banner-btn:hover {
   background-color: white;
   color: #362012;
   transform: scale(1.05);
 }
 
 .form-container {
-  background-color: rgba(62, 39, 35, 0.9);
+  background-color: rgba(62, 39, 35, 0.948);
   padding: 2rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   width: 100%;
@@ -209,7 +215,6 @@ header nav li a:hover {
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
-  border: 2px solid red;
   width: 150px;
 }
 .about .container .row .col-lg-6 .text-wrapper .serve .serve-item img {
@@ -230,7 +235,7 @@ header nav li a:hover {
 
 .recipes {
   width: 100%;
-  min-height: 600px;
+  min-height: 500px;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
@@ -258,8 +263,7 @@ header nav li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.5rem 1rem;
-  border: 2px solid red;
+  margin: 1rem 1rem;
   width: 300px;
   height: 400px;
   align-items: center;
@@ -334,7 +338,7 @@ header nav li a:hover {
 }
 .our-services .services-wrapper .services-item {
   width: 300px;
-  height: 350px;
+  height: 450px;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -376,7 +380,7 @@ header nav li a:hover {
 }
 
 .team-wrapper {
-  width: 90%;
+  width: 97%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -403,9 +407,10 @@ header nav li a:hover {
   align-items: center;
 }
 .team-wrapper .team-item .overlay span {
-  background-color: rgba(255, 255, 255, 0.515);
+  background-color: rgba(255, 255, 255, 0.881);
   padding: 0.8em;
   color: #3e2012;
+  font-weight: 400;
 }
 .team-wrapper #teams {
   display: flex;
@@ -443,7 +448,7 @@ header nav li a:hover {
   color: #000000;
   margin-top: 1em;
   text-align: center;
-  width: 40%;
+  width: 60%;
 }
 .partners .partners-wrapper {
   width: 95%;
@@ -484,21 +489,11 @@ header nav li a:hover {
 
 .testmonial {
   width: 100%;
-  min-height: 1000px;
+  min-height: 1020px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-position: center;
-  background-size: cover;
-}
-.testmonial h2 {
-  font-size: 30px;
-  font-weight: 700;
-  color: #3e2012;
-  margin-top: 1em;
-  text-align: center;
-  width: 100%;
+  justify-content: center;
 }
 .testmonial p {
   font-size: 18px;
@@ -508,87 +503,334 @@ header nav li a:hover {
   text-align: center;
   width: 40%;
 }
-.testmonial .testimonial-wrapper {
-  min-height: 800px;
+.testmonial h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #3e2012;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+.testmonial .testimonies {
+  position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.376);
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.testmonial .flex-cotainer {
-  width: 100%;
-  height: 400px;
+.testmonial .testimonies .first-test {
   display: flex;
-  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
 }
-.testmonial .flex-cotainer .overlay {
+.testmonial .testimonies .first-test .test2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  z-index: 2;
+}
+.testmonial .testimonies .first-test .test2 .small-img {
+  width: 50%;
+  height: 450px;
+}
+.testmonial .testimonies .first-test .test2 .small-img img {
   width: 100%;
   height: 100%;
-  background-color: rgba(62, 32, 18, 0.311);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+.testmonial .testimonies .first-test .test2 .test-content {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testmonial .testimonies .first-test .test2 .test-content .line {
+  width: 120px;
+  background-color: #362012;
+  height: 3px;
+}
+.testmonial .testimonies .first-test .test2 .test-content .icon-div {
+  color: #3e2012;
+  font-size: 2rem;
+  gap: 10px;
+  margin-top: 20px;
+}
+.testmonial .testimonies .first-test .test2 .comment {
+  background-color: #EDC588;
+}
+.testmonial .testimonies #test-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+.testmonial .testimonies #test-1 #img-1 {
+  width: 50%;
+  height: 450px;
+}
+.testmonial .testimonies #test-1 #img-1 img {
+  width: 100%;
+  height: 100%;
+}
+.testmonial .testimonies #test-1 .test-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testmonial .testimonies #test-1 .test-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 1em;
+  text-align: center;
+  width: 70%;
+}
+.testmonial .testimonies #test-1 .test-content .icon-div {
+  color: #3e2012;
+  font-size: 2rem;
+  gap: 10px;
+  margin-top: 20px;
+}
+.testmonial .testimonies::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 244, 244, 0.8);
+}
+
+footer .footer-content {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+footer .footer-content ul {
+  list-style: none;
+}
+footer .footer-content ul a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-content .footer-item {
+  background-color: #EDC588;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 20%;
+  color: #3e2012;
+  padding-left: 20px;
+}
+footer .footer-content .foot-links {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .footer-content .foot-links .links-item {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 280px;
+}
+footer .footer-content .foot-links .links-item .socials {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+  color: #EDC588;
+  margin-top: 2rem;
+}
+footer .footer-content .foot-links .links-item .subcribe {
+  background-color: #EDC588;
+  width: 200px;
+  height: 50px;
+  padding: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+footer .footer-content .foot-links .links-item .subcribe span {
+  font-weight: 700;
+  color: #362012;
+}
+footer .footer-content .foot-links .links-item .subcribe button {
+  background-color: #362012;
+  color: #ffffff;
+  border: none;
+  padding: 0.5em;
+  height: 100%;
+}
+footer .footer-content .foot-links .links-item .subcribe button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .footer-content .foot-links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 32, 18, 0.646);
+}
+
 @media (max-width: 992px) {
-  .testmonial header {
+  header {
     height: 10vh;
     padding: 10px 0;
   }
-  .testmonial header nav .navbar-brand {
+  header nav .navbar-brand {
     width: 150px;
     height: 8vh;
   }
-  .testmonial .banner {
+  .banner {
     height: 80vh;
   }
-  .testmonial .banner .bannerh1 h1 {
+  .banner .bannerh1 h1 {
     font-size: 5em;
   }
-  .testmonial .banner .decoration .coffee-seed, .testmonial .banner .decoration .coffee-cup {
+  .banner .decoration .coffee-seed, .banner .decoration .coffee-cup {
     max-width: 300px;
     height: 200px;
   }
-  .testmonial .about {
+  .about {
     margin-top: 45rem;
   }
-  .testmonial .about .container .row .col-lg-6 .text-wrapper h3 {
+  .about .container .row .col-lg-6 .text-wrapper h3 {
     font-size: 30px;
     width: 100%;
   }
-  .testmonial .container .row .col-lg-6 .text-wrapper {
+  .container .row .col-lg-6 .text-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .testmonial .partners-wrapper {
+  .partners-wrapper {
     flex-wrap: wrap;
+  }
+  .testmonial p {
+    width: 80%;
+  }
+  .testmonial h2 {
+    width: 100%;
+  }
+  .testmonial .testimonies .first-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .testmonial .testimonies .first-test .test2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .testmonial .testimonies .first-test .test2 .small-img {
+    width: 100%;
+    height: 450px;
+  }
+  .testmonial .testimonies .first-test .test2 .test-content {
+    width: 100%;
+  }
+  .testmonial .testimonies #test-1, .testmonial .testimonies .first-test {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testmonial .testimonies #test-1 #img-1, .testmonial .testimonies #test-1 .small-img, .testmonial .testimonies .first-test #img-1, .testmonial .testimonies .first-test .small-img {
+    width: 100%;
+  }
+  .testmonial .testimonies #test-1 #img-1 img, .testmonial .testimonies #test-1 .small-img img, .testmonial .testimonies .first-test #img-1 img, .testmonial .testimonies .first-test .small-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .testmonial .testimonies #test-1 .test-content, .testmonial .testimonies .first-test .test-content {
+    width: 100%;
+  }
+  footer .footer-content {
+    border: 2px solid red;
+    color: #ffffff;
+  }
+  footer .footer-content ul {
+    list-style: none;
+  }
+  footer .footer-content ul a {
+    color: white;
+    text-decoration: none;
+  }
+  footer .footer-content .footer-item {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer .footer-content .foot-links {
+    width: 100%;
+  }
+  footer .footer-content .foot-links .links-item {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: #EDC588;
+    width: 100%;
+  }
+  .test2 {
+    flex-direction: column;
   }
 }
 @media (max-width: 576px) {
-  .testmonial header {
+  .navbar-brand {
+    display: none;
+  }
+  p {
+    width: 80%;
+  }
+  header {
     height: 8vh;
     padding: 5px 0;
   }
-  .testmonial header nav .navbar-brand {
+  header nav .navbar-brand {
     width: 120px;
     height: 6vh;
   }
-  .testmonial .banner {
+  .banner {
     height: 70vh;
   }
-  .testmonial .banner .bannerh1 h1 {
+  .banner .bannerh1 h1 {
     font-size: 4em;
   }
-  .testmonial .banner .decoration .coffee-seed, .testmonial .banner .decoration .coffee-cup {
+  .banner .decoration .coffee-seed, .banner .decoration .coffee-cup {
     max-width: 250px;
     height: 200px;
   }
-  .testmonial .about {
+  .about {
     margin-top: 58rem;
   }
-  .testmonial .team h2, .testmonial .partners h2 {
-    width: 100%;
+  #teams {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
