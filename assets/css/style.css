@@ -332,11 +332,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   flex-wrap: wrap;
   margin-top: 1.5em;
 }
 .our-services .services-wrapper .services-item {
+  margin-top: 1.5em;
   width: 300px;
   height: 450px;
   background-position: center;
@@ -344,13 +345,78 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: center;
+  align-items: start;
 }
 .our-services .services-wrapper .services-item span {
   background-color: rgba(244, 244, 244, 0.734);
   width: 80% x;
   margin-bottom: 20px;
   padding: 0.3em;
+}
+
+#order-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+#order-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#order-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+#order-form input[type=text],
+#order-form input[type=email],
+#order-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#order-form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 25px;
+}
+
+#order-form button[type=submit] {
+  background-color: #3e2012;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#order-form button[type=submit]:hover {
+  background-color: #EDC588;
 }
 
 .team {
