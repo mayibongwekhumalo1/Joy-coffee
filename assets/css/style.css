@@ -830,7 +830,41 @@ footer .footer-content .foot-links::after {
   .about {
     margin-top: 60rem;
   }
-  #teams {
+  .team .team-wrapper .team-item {
+    width: 320px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .team .team-wrapper #teams {
     display: none;
+  }
+  footer .footer-content .footer-item {
+    align-items: center;
+  }
+  footer .footer-content .logo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-content .logo img {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  footer .footer-content .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-content .details p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
   }
 }/*# sourceMappingURL=style.css.map */
